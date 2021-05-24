@@ -1,0 +1,10 @@
+{
+    "AWSEBDockerrunVersion" : 2,
+    "containerDefinations":[
+        {
+            "name": "Client",
+            "image":"kshitijm3/multi-client"
+            
+        }
+    ]
+}
