@@ -3,8 +3,8 @@
     "containerDefinations":[
         {
             "name": "Client",
-            "image":"kshitijm3/multi-client"
-            
+            "image":"kshitijm3/multi-clit"
+
         }
     ]
 }
