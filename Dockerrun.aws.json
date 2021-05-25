@@ -3,8 +3,40 @@
     "containerDefinations":[
         {
             "name": "Client",
-            "image":"kshitijm3/multi-clit"
+            "image":"kshitijm3/multi-client",
+            "hostname" : "client",
+            "essential": false
+
+        },
+        {
+            "name":"server",
+            "image":"kshitijm3/multi-server",
+            "hostname":"api",
+            "essential":false
+
+        },
+        {
+            "name":"worker",
+            "image":"kshitijm3/multi-worker",
+            "hostname":"worker",
+            "essential":false
+
+        },
+        {
+            "name":"nginx",
+            "image":"kshitijm3/multi-nginx",
+            "hostname":"nginx",
+            "essential":true,
+            "portMappings": [{
+                "hostPort":80,
+                "containerPort":80
+            }],
+            "links": ["client","server"]
+
 
         }
+
+
+
     ]
 }
